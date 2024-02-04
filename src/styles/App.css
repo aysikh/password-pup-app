@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.password-preview-input {
+  height: 5rem;
+  font-size: 3rem;
   color: white;
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+  font-weight: 500;
+  background-color: transparent;
+  background-clip: padding-box;
+  border: none;
+  border-radius: var(--bs-border-radius);
 }
 
-.App-link {
-  color: #61dafb;
+.password-preview-input-group {
+    border-bottom: solid white;
+    margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.preview-container {
+    padding: 30px 12%;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
   }
-  to {
-    transform: rotate(360deg);
-  }
+  
+.custom-container {
+    background-color: #FCFCFC;
+}
+
+.custom-icon {
+    font-size: 32px;
+}
+
+.custom-button {
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+.custom-button:hover {
+    color: black;
+}
+
+.emoji {
+    margin-left: -10px;
+    font-size: 20px;
+    z-index: 1;
+}
+
+.strength-label {
+    color: white;
+    margin-top: 2px;
+    z-index: 1;
+}
+
+.bg-light {
+   background-color: #FDFBD4
+}
+
+.bg-good {
+    background-color: #FFC83D;
+}
+
+.bg-meh {
+    background-color: #FF9A47
+}
+
+.bg-awful {
+    background-color: #EE594A;
+}
+
+.bg-empty {
+    background-color: #01010D;
+}
+
+.bg-excellent::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 10px solid transparent; /* Adjust the border size as needed */
+    border-radius: 12px; /* Slightly larger to maintain the container's rounded corners */
+    background: linear-gradient(90deg, 
+    #fd004c, #fe9000, #fff020, 
+    #3edf4b, #3363ff, #b102b7, 
+    #fd004c, #fe9000, #fff020, /* Repeat the sequence for a smooth transition */
+    #3edf4b, #3363ff, #b102b7, #fd004c); /* End with the start color for seamless looping */
+    background-size: 500% 200%;
+    z-index: 0;
+    animation: shiftRainbow 20s linear infinite;
+}
+
+@keyframes shiftRainbow {
+    from {
+        background-position: 200% 0;
+    }
+    to {
+        background-position: -100% 0;
+    }
 }
