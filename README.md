@@ -1,10 +1,12 @@
-# Password Generator Chrome Extension
+# Password Generator Web App
 
 ![Favicon](public/favicon.ico "Password Pup Logo")
+- Logo created by ChatGPT
+
 ## Description
 
 This Password Generator Web App provides users with a secure and customizable way to generate passwords. 
-git 
+
 ## Features
 
 - **Customizable Word Input**: Users can input their favorite word(s) to be included in their password.
